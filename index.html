@@ -21,32 +21,31 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="min-h-screen">
-    <!-- Floating navbar -->
     <header
-      id="main-header"
-      class="fixed top-0 left-0 z-30 w-full sticky-nav nav-dark"
+    id="main-header"
+    class="fixed top-0 left-0 z-30 w-full sticky-nav nav-dark"
+  >
+    <div
+      class="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-8 py-6"
     >
-      <div
-        class="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-8 py-6"
-      >
-        <!-- Logo as image -->
-        <a href="#" class="flex items-center">
-          <img
-            src="assets/images/logo.png"
-            alt="GoSri logo"
-            class="h-8 w-auto md:h-10"
-          />
-        </a>
+      <!-- Logo as image -->
+      <a href="#" class="flex items-center">
+        <img
+          src="assets/images/logo.png"
+          alt="GoSri logo"
+          class="h-12 w-auto md:h-16"   
+        />
+      </a>
 
-        <!-- Contact button -->
-        <a
-          href="#contact"
-          class="btn-hero inline-flex items-center justify-center rounded-full border border-white/80 px-5 py-2 text-xs md:text-sm font-medium uppercase tracking-[0.16em] text-white bg-transparent"
-        >
-          Contact us
-        </a>
-      </div>
-    </header>
+      <!-- Contact button -->
+      <a
+        href="#contact"
+        class="btn-hero inline-flex items-center justify-center rounded-full border border-white/80 px-5 py-2 text-xs md:text-sm font-medium uppercase tracking-[0.16em] text-white bg-transparent"
+      >
+        Contact us
+      </a>
+    </div>
+  </header>
 
     <!-- HERO SECTION -->
     <section
@@ -1028,6 +1027,66 @@
       <script async src="https://www.instagram.com/embed.js"></script>
     </section>
 
+    <section id="reach" class="bg-[var(--color-surface)] px-4 md:px-8 py-20">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section header -->
+        <div class="text-center">
+          <p
+            class="font-gotham-black tracking-[0.24em] uppercase text-xs sm:text-sm text-[var(--color-secondary)]"
+          >
+            Our reach in numbers
+          </p>
+          <h2
+            class="mt-3 font-gotham-black text-2xl sm:text-3xl md:text-4xl tracking-[0.18em] uppercase text-[var(--color-text)]"
+          >
+            What your brand taps into
+          </h2>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+          <!-- Instagram followers -->
+          <article class="stat-card">
+            <p
+              class="stat-number"
+              data-stat="ig-followers"
+              data-target="15000"
+              <!--
+              fallback
+              if
+              API
+              fails
+              --
+            >
+              > 0
+            </p>
+            <p class="stat-label">Instagram followers</p>
+          </article>
+
+          <!-- YouTube subscribers -->
+          <article class="stat-card">
+            <p class="stat-number" data-stat="yt-subs" data-target="5000">0</p>
+            <p class="stat-label">YouTube subscribers</p>
+          </article>
+
+          <!-- YouTube total views -->
+          <article class="stat-card">
+            <p class="stat-number" data-stat="yt-views" data-target="200000">
+              0
+            </p>
+            <p class="stat-label">YouTube total views</p>
+          </article>
+
+          <!-- Static number (no API) -->
+          <article class="stat-card">
+            <p class="stat-number" data-target="120">0</p>
+            <p class="stat-label">Collabs completed</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
     <section id="partners" class="bg-[var(--color-bg)] px-4 md:px-8 py-16">
       <div class="max-w-6xl mx-auto">
         <!-- Simple heading -->
@@ -1208,65 +1267,6 @@
               />
               <span class="partner-name">VAS Experts</span>
             </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="reach" class="bg-[var(--color-surface)] px-4 md:px-8 py-20">
-      <div class="max-w-6xl mx-auto">
-        <!-- Section header -->
-        <div class="text-center">
-          <p
-            class="font-gotham-black tracking-[0.24em] uppercase text-xs sm:text-sm text-[var(--color-secondary)]"
-          >
-            Our reach in numbers
-          </p>
-          <h2
-            class="mt-3 font-gotham-black text-2xl sm:text-3xl md:text-4xl tracking-[0.18em] uppercase text-[var(--color-text)]"
-          >
-            What your brand taps into
-          </h2>
-        </div>
-
-        <!-- Stat cards -->
-        <div class="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <!-- Instagram followers -->
-          <article class="stat-card">
-            <p
-              class="stat-number"
-              data-stat="ig-followers"
-              data-target="15000"
-              <!--
-              fallback
-              if
-              API
-              fails
-              --
-            >
-              > 0
-            </p>
-            <p class="stat-label">Instagram followers</p>
-          </article>
-
-          <!-- YouTube subscribers -->
-          <article class="stat-card">
-            <p class="stat-number" data-stat="yt-subs" data-target="5000">0</p>
-            <p class="stat-label">YouTube subscribers</p>
-          </article>
-
-          <!-- YouTube total views -->
-          <article class="stat-card">
-            <p class="stat-number" data-stat="yt-views" data-target="200000">
-              0
-            </p>
-            <p class="stat-label">YouTube total views</p>
-          </article>
-
-          <!-- Static number (no API) -->
-          <article class="stat-card">
-            <p class="stat-number" data-target="120">0</p>
-            <p class="stat-label">Collabs completed</p>
-          </article>
         </div>
       </div>
     </section>

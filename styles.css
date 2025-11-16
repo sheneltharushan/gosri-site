@@ -226,7 +226,7 @@ html {
 }
 
 .partner-logo {
-  max-height: 40px;
+  max-height: 1000px;
   width: auto;
   object-fit: contain;
   opacity: 0.9;
