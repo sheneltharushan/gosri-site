@@ -181,7 +181,7 @@ let socialStatsLoaded = false;
 
 async function loadSocialStats() {
   try {
-    const res = await fetch("/.netlify/functions/social-stats");
+    const res = await fetch("netlify/functions/social-stats.js");
     if (!res.ok) return;
 
     const data = await res.json();
