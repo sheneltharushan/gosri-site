@@ -1,0 +1,309 @@
+:root {
+  --color-bg: #faf3e0;
+  --color-surface: #fff9ef;
+  --color-primary: #2e8b57;
+  --color-primary-hover: #256f47;
+  --color-secondary: #0b3c49;
+  --color-accent: #e57c23;
+  --color-muted: #cde6d0;
+  --color-text: #2a2a2a;
+  --color-text-secondary: #525252;
+  --color-white: #ffffff;
+
+  /* use Gotham in the variables */
+  --font-body: "Gotham Light", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-display: "Gotham Black", "Playfair Display", "Times New Roman", serif;
+}
+
+/* load Gotham weights */
+@font-face {
+  font-family: "Gotham Light";
+  src: url("/assets/fonts/Gotham-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Black";
+  src: url("/assets/fonts/GOTHAM-BLACK.TTF") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* optional helpers if you want to force specific weights somewhere */
+.font-gotham-light {
+  font-family: "Gotham Light", sans-serif;
+}
+
+.font-gotham-black {
+  font-family: "Gotham Black", sans-serif;
+}
+
+/* body + display keep using the variables */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* navbar animation */
+.sticky-nav {
+  transition: transform 0.35s ease, background-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nav-hidden {
+  transform: translateY(-120%);
+}
+
+/* navbar over dark hero */
+.nav-dark {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.nav-dark .btn-hero {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+}
+
+/* navbar over light background */
+.nav-light {
+  background-color: var(--color-surface);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nav-light .btn-hero {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: transparent;
+}
+
+.nav-light .btn-hero:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+/* hero entrance */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeInUp 0.9s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+/* hero button wave */
+.btn-hero {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.btn-hero::after {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -30%;
+  width: 160%;
+  height: 400%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.38),
+    transparent 55%
+  );
+  opacity: 0;
+  transform: translateX(-40%) rotate(8deg);
+  transition: opacity 0.5s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.btn-hero:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.btn-hero:hover::after {
+  opacity: 1;
+  transform: translateX(40%) rotate(8deg);
+}
+
+/* scroll hint */
+.bounce-slow {
+  animation: bounceSlow 1.8s ease-in-out infinite;
+}
+
+/* keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceSlow {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -6px);
+  }
+}
+
+/* Custom scrollbar – works in Chrome, Edge, Safari */
+html {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--color-primary) transparent;
+}
+
+/* Chrome / Edge / Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 999px;
+  border: 2px solid transparent; /* makes the thumb slimmer */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Remove scrollbar arrow buttons */
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* "How we collaborate" scroll zoom */
+.collab-sticky {
+  position: sticky;
+  top: 0; /* full viewport panel */
+}
+
+.collab-zoom {
+  transform: scale(var(--collab-scale, 0.9));
+  transform-origin: center center;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* Our collaborations – card intro animation */
+.collab-card {
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.collab-card-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Our partners – logo items */
+.partner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 7rem;
+}
+
+.partner-logo {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.partner-name {
+  margin-top: 0.4rem;
+  font-family: "Gotham Light", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* hover: tiny lift */
+.partner-item:hover .partner-logo {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.partner-item:hover .partner-name {
+  color: var(--color-secondary);
+}
+
+/* Our reach in numbers – stat cards */
+.stat-card {
+  background-color: var(--color-bg);
+  border-radius: 1.5rem;
+  padding: 1.8rem 1.9rem;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(16px) scale(0.97);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out,
+    box-shadow 0.25s ease-out, background-color 0.25s ease-out;
+}
+
+.stat-card-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.stat-card:hover {
+  background-color: var(--color-surface);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* big numbers */
+.stat-number {
+  font-family: "Gotham Black", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+@media (min-width: 640px) {
+  .stat-number {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stat-number {
+    font-size: 3rem;
+  }
+}
+
+.stat-label {
+  margin-top: 0.55rem;
+  font-family: "Gotham Light", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GoSri | Collaborations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Display font for the big GoSri title -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.40/dist/lenis.min.js"></script>
+
+    <!-- Your theme (colors, fonts, animations) -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen">
+    <!-- Floating navbar -->
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 z-30 w-full sticky-nav nav-dark"
+    >
+      <div
+        class="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-8 py-6"
+      >
+        <!-- Logo as image -->
+        <a href="#" class="flex items-center">
+          <img
+            src="assets/images/logo.png"
+            alt="GoSri logo"
+            class="h-8 w-auto md:h-10"
+          />
+        </a>
+
+        <!-- Contact button -->
+        <a
+          href="#contact"
+          class="btn-hero inline-flex items-center justify-center rounded-full border border-white/80 px-5 py-2 text-xs md:text-sm font-medium uppercase tracking-[0.16em] text-white bg-transparent"
+        >
+          Contact us
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="hero"
+      class="relative h-screen min-h-[600px] text-white overflow-hidden"
+    >
+      <!-- Background video -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover"
+        src="assets/videos/hero_video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <!-- Dark overlay so text is readable -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Centered hero content -->
+      <div class="relative z-20 flex items-center justify-center h-full">
+        <div class="text-center px-4 fade-in-up">
+          <!-- Big GoSri heading -->
+          <h1
+            class="font-Gotham Light text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] tracking-[0.28em] uppercase text-white"
+          >
+            GoSri
+          </h1>
+
+          <!-- Optional subtitle -->
+          <p
+            class="mt-4 text-[0.75rem] sm:text-xs md:text-sm tracking-[0.22em] uppercase text-white/80"
+          >
+            Sri Lankan travel collaborations redefined
+          </p>
+
+          <!-- Explore button -->
+          <div class="mt-10">
+            <a
+              href="#explore"
+              class="btn-hero inline-flex items-center justify-center rounded-full border border-white/90 px-10 py-3 text-[0.75rem] sm:text-xs md:text-sm font-medium uppercase tracking-[0.2em] text-white bg-transparent"
+            >
+              Explore
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/70 text-[0.65rem] bounce-slow"
+      >
+        <span>Scroll to discover</span>
+        <span class="mt-2 h-8 w-px bg-white/40"></span>
+      </div>
+    </section>
+
+    <section
+      id="collab-section"
+      class="relative bg-[var(--color-surface)] text-[var(--color-secondary)] px-4 md:px-8 py-24 md:py-32"
+    >
+      <div class="max-w-5xl mx-auto h-[200vh] md:h-[240vh]">
+        <!-- sticky viewport-height panel so text is always centered -->
+        <div class="collab-sticky h-screen flex items-center justify-center">
+          <div
+            id="collab-content"
+            class="collab-zoom text-center px-4 sm:px-6 opacity-0 max-w-xl md:max-w-3xl mx-auto"
+          >
+            <h2
+              class="font-gotham-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.16em] md:tracking-[0.18em] uppercase"
+            >
+              How we collaborate?
+            </h2>
+
+            <p
+              class="mt-6 text-sm md:text-base leading-relaxed text-[var(--color-text-secondary)] font-gotham-light"
+            >
+              We promote local businesses through our social media and help them
+              generate hundreds of qualified leads. Through destination
+              features, creator-style reels, and carefully timed campaigns, we
+              put your story in front of travellers who are already dreaming of
+              Sri Lanka. Our collaborations are built to feel authentic, drive
+              real inquiries, and keep your bookings flowing season after
+              season.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="our-collaborations"
+      class="bg-[var(--color-bg)] px-4 md:px-8 py-20"
+    >
+      <div class="max-w-6xl mx-auto">
+        <!-- Section header -->
+        <div class="text-center">
+          <p
+            class="font-gotham-black text-2xl sm:text-3xl md:text-4xl uppercase tracking-[0.22em] text-[var(--color-secondary)]"
+          >
+            Our collaborations
+          </p>
+          <h2
+            class="mt-3 font-gotham-light text-xl md:text-2xl text-[var(--color-text)]"
+          >
+            GoSri × Local Partners
+          </h2>
+          <p
+            class="mt-3 max-w-2xl mx-auto text-xs md:text-sm text-[var(--color-text-secondary)] font-gotham-light"
+          >
+            A look at real campaigns we have run with hotels, cafés, and brands
+            across Sri Lanka.
+          </p>
+        </div>
+
+        <!-- PART 1: Hotels & Villas -->
+        <section class="mt-10">
+          <h3
+            class="font-gotham-black text-base sm:text-lg md:text-xl uppercase tracking-[0.22em] text-[var(--color-secondary)]"
+          >
+            Collaborations with hotels &amp; Villas
+          </h3>
+
+          <div
+            class="mt-4 flex gap-4 overflow-x-auto pb-3 scroll-smooth snap-x snap-mandatory"
+          >
+            <!-- Card 1 -->
+            <article
+              class="collab-card group bg-[var(--color-surface)] rounded-2xl p-3 md:p-4 shadow-md flex-shrink-0 w-[22rem] sm:w-[24rem] lg:w-[26rem] min-w-[21rem] snap-start"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl bg-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/reel/DRGlPEcEsCL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  data-instgrm-version="14"
+                  style="
+                    background: #fff;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                  "
+                ></blockquote>
+              </div>
+
+              <div class="mt-3">
+                <p
+                  class="font-gotham-black text-[0.75rem] uppercase tracking-[0.18em] text-[var(--color-secondary)]"
+                >
+                  GoSri × Oceanview Villa
+                </p>
+                <p
+                  class="mt-1 text-[0.75rem] text-[var(--color-text-secondary)] font-gotham-light leading-relaxed"
+                >
+                  Weekend escape reel focusing on pool, rooms, and sunset views
+                  to push last-minute bookings.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+              class="collab-card group bg-[var(--color-surface)] rounded-2xl p-3 md:p-4 shadow-md flex-shrink-0 w-[22rem] sm:w-[24rem] lg:w-[26rem] min-w-[21rem] snap-start"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl bg-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/reel/DRGlPEcEsCL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  data-instgrm-version="14"
+                  style="
+                    background: #fff;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                  "
+                ></blockquote>
+              </div>
+
+              <div class="mt-3">
+                <p
+                  class="font-gotham-black text-[0.75rem] uppercase tracking-[0.18em] text-[var(--color-secondary)]"
+                >
+                  GoSri × Hilltop Retreat
+                </p>
+                <p
+                  class="mt-1 text-[0.75rem] text-[var(--color-text-secondary)] font-gotham-light leading-relaxed"
+                >
+                  Story-driven reel showing the journey, breakfast, and misty
+                  morning to attract couples and friend groups.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="collab-card group bg-[var(--color-surface)] rounded-2xl p-3 md:p-4 shadow-md flex-shrink-0 w-[22rem] sm:w-[24rem] lg:w-[26rem] min-w-[21rem] snap-start"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl bg-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/reel/DRGlPEcEsCL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  data-instgrm-version="14"
+                  style="
+                    background: #fff;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                  "
+                ></blockquote>
+              </div>
+
+              <div class="mt-3">
+                <p
+                  class="font-gotham-black text-[0.75rem] uppercase tracking-[0.18em] text-[var(--color-secondary)]"
+                >
+                  GoSri × Oceanview Villa
+                </p>
+                <p
+                  class="mt-1 text-[0.75rem] text-[var(--color-text-secondary)] font-gotham-light leading-relaxed"
+                >
+                  Weekend escape reel focusing on pool, rooms, and sunset views
+                  to push last-minute bookings.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="collab-card group bg-[var(--color-surface)] rounded-2xl p-3 md:p-4 shadow-md flex-shrink-0 w-[22rem] sm:w-[24rem] lg:w-[26rem] min-w-[21rem] snap-start"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl bg-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/reel/DRGlPEcEsCL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  data-instgrm-version="14"
+                  style="
+                    background: #fff;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                  "
+                ></blockquote>
+              </div>
+
+              <div class="mt-3">
+                <p
+                  class="font-gotham-black text-[0.75rem] uppercase tracking-[0.18em] text-[var(--color-secondary)]"
+                >
+                  GoSri × Oceanview Villa
+                </p>
+                <p
+                  class="mt-1 text-[0.75rem] text-[var(--color-text-secondary)] font-gotham-light leading-relaxed"
+                >
+                  Weekend escape reel focusing on pool, rooms, and sunset views
+                  to push last-minute bookings.
+                </p>
+              </div>
+            </article>
+
+            <!-- Add more hotel/villa cards as needed -->
+          </div>
+        </section>
+
+        <!-- PART 2: Cafés & Restaurants -->
+        <section class="mt-10">
+          <h3
+            class="font-gotham-black text-base sm:text-lg md:text-xl uppercase tracking-[0.22em] text-[var(--color-secondary)]"
+          >
+            Collaborations with cafés &amp; restaurants
+          </h3>
+
+          <div
+            class="mt-4 flex gap-4 overflow-x-auto pb-3 scroll-smooth snap-x snap-mandatory"
+          >
+            <article
+              class="collab-card group bg-[var(--color-surface)] rounded-2xl p-3 md:p-4 shadow-md flex-shrink-0 w-[22rem] sm:w-[24rem] lg:w-[26rem] min-w-[21rem] snap-start"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl bg-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID_CAFE_1/"
+                  data-instgrm-version="14"
+                  style="
+                    background: #fff;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                  "
+                ></blockquote>
+              </div>
+
+              <div class="mt-3">
+                <p
+                  class="font-gotham-black text-[0.75rem] uppercase tracking-[0.18em] text-[var(--color-secondary)]"
+                >
+                  GoSri × Sunset Café
+                </p>
+                <p
+                  class="mt-1 text-[0.75rem] text-[var(--color-text-secondary)] font-gotham-light leading-relaxed"
+                >
+                  Launch reel for their new brunch menu, highlighting dishes,
+                  ambience, and location.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="collab-card group bg-[var(--color-surface)] rounded-2xl p-3 md:p-4 shadow-md flex-shrink-0 w-[22rem] sm:w-[24rem] lg:w-[26rem] min-w-[21rem] snap-start"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl bg-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID_CAFE_2/"
+                  data-instgrm-version="14"
+                  style="
+                    background: #fff;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                  "
+                ></blockquote>
+              </div>
+
+              <div class="mt-3">
+                <p
+                  class="font-gotham-black text-[0.75rem] uppercase tracking-[0.18em] text-[var(--color-secondary)]"
+                >
+                  GoSri × Harbour Diner
+                </p>
+                <p
+                  class="mt-1 text-[0.75rem] text-[var(--color-text-secondary)] font-gotham-light leading-relaxed"
+                >
+                  Evening feature capturing lights, cocktails, and views to push
+                  after-work traffic.
+                </p>
+              </div>
+            </article>
+            <!-- Add more café/restaurant cards -->
+          </div>
+        </section>
+
+        <!-- PART 3: Other Businesses -->
+        <section class="mt-10">
+          <h3
+            class="font-gotham-black text-base sm:text-lg md:text-xl uppercase tracking-[0.22em] text-[var(--color-secondary)]"
+          >
+            Collaborations with other businesses
+          </h3>
+
+          <div
+            class="mt-4 flex gap-4 overflow-x-auto pb-3 scroll-smooth snap-x snap-mandatory"
+          >
+            <article
+              class="collab-card group bg-[var(--color-surface)] rounded-2xl p-3 md:p-4 shadow-md flex-shrink-0 w-[22rem] sm:w-[24rem] lg:w-[26rem] min-w-[21rem] snap-start"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl bg-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID_OTHER_1/"
+                  data-instgrm-version="14"
+                  style="
+                    background: #fff;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                  "
+                ></blockquote>
+              </div>
+
+              <div class="mt-3">
+                <p
+                  class="font-gotham-black text-[0.75rem] uppercase tracking-[0.18em] text-[var(--color-secondary)]"
+                >
+                  GoSri × Adventure Tours
+                </p>
+                <p
+                  class="mt-1 text-[0.75rem] text-[var(--color-text-secondary)] font-gotham-light leading-relaxed"
+                >
+                  Activity-focused reel promoting rafting and hikes for weekend
+                  travellers and friend groups.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="collab-card group bg-[var(--color-surface)] rounded-2xl p-3 md:p-4 shadow-md flex-shrink-0 w-[22rem] sm:w-[24rem] lg:w-[26rem] min-w-[21rem] snap-start"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl bg-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID_OTHER_2/"
+                  data-instgrm-version="14"
+                  style="
+                    background: #fff;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                  "
+                ></blockquote>
+              </div>
+
+              <div class="mt-3">
+                <p
+                  class="font-gotham-black text-[0.75rem] uppercase tracking-[0.18em] text-[var(--color-secondary)]"
+                >
+                  GoSri × Local Brand
+                </p>
+                <p
+                  class="mt-1 text-[0.75rem] text-[var(--color-text-secondary)] font-gotham-light leading-relaxed"
+                >
+                  Product-led reel tying their brand story to Sri Lankan travel
+                  moments and experiences.
+                </p>
+              </div>
+            </article>
+            <!-- Add more other-business cards -->
+          </div>
+        </section>
+      </div>
+
+      <!-- Instagram embed script (keep only once on the whole page) -->
+      <script async src="https://www.instagram.com/embed.js"></script>
+    </section>
+
+    <section id="partners" class="bg-[var(--color-bg)] px-4 md:px-8 py-16">
+      <div class="max-w-6xl mx-auto">
+        <!-- Simple heading -->
+        <div class="text-center">
+          <h2
+            class="font-gotham-black text-2xl sm:text-3xl md:text-4xl uppercase tracking-[0.22em] text-[var(--color-secondary)]"
+          >
+            Our partners
+          </h2>
+        </div>
+
+        <!-- Logo carousel -->
+        <div class="mt-8 relative overflow-hidden">
+          <div
+            id="partner-track"
+            class="flex gap-10 items-center will-change-transform"
+          >
+            <!-- One set of partner items – JS will duplicate these for looping -->
+
+            <div class="partner-item">
+              <img
+                src="assets/partners/oceanview-villa-logo.png"
+                alt="Oceanview Villa"
+                class="partner-logo"
+              />
+              <span class="partner-name">Oceanview Villa</span>
+            </div>
+
+            <div class="partner-item">
+              <img
+                src="assets/partners/hilltop-retreat-logo.png"
+                alt="Hilltop Retreat"
+                class="partner-logo"
+              />
+              <span class="partner-name">Hilltop Retreat</span>
+            </div>
+
+            <div class="partner-item">
+              <img
+                src="assets/partners/sunset-cafe-logo.png"
+                alt="Sunset Café"
+                class="partner-logo"
+              />
+              <span class="partner-name">Sunset Café</span>
+            </div>
+
+            <div class="partner-item">
+              <img
+                src="assets/partners/harbour-diner-logo.png"
+                alt="Harbour Diner"
+                class="partner-logo"
+              />
+              <span class="partner-name">Harbour Diner</span>
+            </div>
+
+            <div class="partner-item">
+              <img
+                src="assets/partners/adventure-tours-logo.png"
+                alt="Adventure Tours"
+                class="partner-logo"
+              />
+              <span class="partner-name">Adventure Tours</span>
+            </div>
+
+            <div class="partner-item">
+              <img
+                src="assets/partners/local-brand-logo.png"
+                alt="Local Brand"
+                class="partner-logo"
+              />
+              <span class="partner-name">Local Brand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reach" class="bg-[var(--color-surface)] px-4 md:px-8 py-20">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section header -->
+        <div class="text-center">
+          <p
+            class="font-gotham-black tracking-[0.24em] uppercase text-xs sm:text-sm text-[var(--color-secondary)]"
+          >
+            Our reach in numbers
+          </p>
+          <h2
+            class="mt-3 font-gotham-black text-2xl sm:text-3xl md:text-4xl tracking-[0.18em] uppercase text-[var(--color-text)]"
+          >
+            What your brand taps into
+          </h2>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+          <!-- Instagram followers -->
+          <article class="stat-card">
+            <p
+              class="stat-number"
+              data-stat="ig-followers"
+              data-target="15000"
+              <!--
+              fallback
+              if
+              API
+              fails
+              --
+            >
+              > 0
+            </p>
+            <p class="stat-label">Instagram followers</p>
+          </article>
+
+          <!-- YouTube subscribers -->
+          <article class="stat-card">
+            <p class="stat-number" data-stat="yt-subs" data-target="5000">0</p>
+            <p class="stat-label">YouTube subscribers</p>
+          </article>
+
+          <!-- YouTube total views -->
+          <article class="stat-card">
+            <p class="stat-number" data-stat="yt-views" data-target="200000">
+              0
+            </p>
+            <p class="stat-label">YouTube total views</p>
+          </article>
+
+          <!-- Static number (no API) -->
+          <article class="stat-card">
+            <p class="stat-number" data-target="120">0</p>
+            <p class="stat-label">Collabs completed</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
